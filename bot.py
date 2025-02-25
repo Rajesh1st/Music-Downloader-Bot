@@ -17,7 +17,7 @@ from Song.commands import status, start, helper
 from Song.database.access_db  import db
 
 # Correcting session initialization
-cbot = Client(session=Config.SESSION_NAME,  # use session instead of session_name
+cbot = Client(session_name=Config.SESSION_NAME,  # use session_name instead of session
               bot_token=Config.BOT_TOKEN,
               api_id=Config.API_ID,
               api_hash=Config.API_HASH)
