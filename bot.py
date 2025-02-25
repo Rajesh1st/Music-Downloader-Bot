@@ -16,7 +16,8 @@ from Song.broadcast import broadcast_handler
 from Song.commands import status, start, helper
 from Song.database.access_db  import db
 
-cbot = Client(session_name=Config.SESSION_NAME,
+# Correcting session initialization
+cbot = Client(session=Config.SESSION_NAME,  # use session instead of session_name
               bot_token=Config.BOT_TOKEN,
               api_id=Config.API_ID,
               api_hash=Config.API_HASH)
